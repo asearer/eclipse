@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle,
+            rgba(42, 42, 31, 0.25) 0%,
+            rgba(0, 0, 0, 1) 100%);
+}
+
+span {
+    margin: auto;
+    font-size: 10rem;
+}
+
+.dot {
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-animation: glowing 1s ease-in-out infinite alternate;
+    -moz-animation: glowing 1s ease-in-out infinite alternate;
+    animation: glowing 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glowing {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff7e33, 0 0 40px #0ff,
+            0 0 50px #f49c1d, 0 0 60px #e90006, 0 0 70px #da6117;
+    }
+
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4d00,
+            0 0 50px #ff8a12, 0 0 60px #ff7c15, 0 0 70px #ff4d44, 0 0 80px #ffc326;
+    }
+}
